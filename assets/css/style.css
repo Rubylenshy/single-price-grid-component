@@ -1,0 +1,130 @@
+*,::before,::after{
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Karla', sans-serif;
+    background-color: rgb(203, 223, 231);
+}
+.card{
+    width: 45%;
+    height: 68vh;
+    margin: 8% auto;
+}
+@media (max-width: 600px) {
+    html{
+        margin: 5% 5px !important;
+    }
+    .card{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: 100% !important;
+        width: 95% !important;
+        padding: 0 10% !important;
+    }
+    .section{
+        height: 33.3% !important;
+        width: 100%;
+        padding: 20px !important;
+        margin: 0 !important;
+    }
+    .two-articles{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .art-1{
+        width: 100% !important;
+        height: 33.3% !important;
+        border-radius: 0 !important;
+        padding: 20px !important;
+        margin: 0 !important;
+    }
+    .art-1 button{
+        margin: 10px 0 !important;
+    }
+    .art-2{
+        width: 100% !important;
+        height: 33.3% !important;
+        border-radius: 0 0 10px 10px !important;
+        padding: 20px !important;
+    }
+}
+.section{
+    background-color: white;
+    height: 45%;
+    padding: 30px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.section h2{
+    color: hsl(179, 63%, 48%);
+}
+.section h3{
+    color: hsl(71, 73%, 54%);
+    margin: 20px 0 0;
+}
+.section p{
+    color: hsl(218, 22%, 67%);
+    line-height: 1.5em;
+    margin: 10px 0 0;
+}
+.two-articles{
+    display: flex;
+}
+.art-1{
+    width: 50%;
+    height: 37.5vh;
+    padding: 30px;
+    border-radius: 0 0 0 10px;
+    background-color: hsl(179, 62%, 43%);
+    color: white;
+}
+.art-1 header{
+    font-weight: bold;
+    margin: 0 0 15px;
+}
+.art-1 strong{
+    font-size: 20pt;
+}
+.art-1 span{
+    color: rgb(199, 221, 230);
+    font-size: 10pt !important;
+    margin:0 10px;
+}
+.art-1 p:last-of-type{
+    color: rgb(231, 239, 243);
+    font-size: 12pt;
+    margin: 5px 0;
+}
+.art-1 button{
+    margin: 25px 2.5%;
+    width: 95%;
+    padding: 14px 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 6px 5px rgb(0, 0, 0, 0.2);
+    background-color: hsl(71, 73%, 54%);
+    color: white;
+}
+.art-2{
+    width: 50%;
+    height: 37.5vh;
+    padding: 30px;
+    border-radius: 0 0 10px 0;
+    background-color: hsla(179, 62%, 43%, 0.8);
+    color: white;
+}
+.art-2 header{
+    font-weight: bold;
+    margin: 0 0 15px;
+}
+.art-2 ul{
+    list-style: none;
+    font-size: 10pt;
+}
+.art-2 ul li{
+    margin: 3px 0;
+    color: rgb(218, 239, 247);
+}
