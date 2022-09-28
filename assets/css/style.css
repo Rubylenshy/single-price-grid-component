@@ -27,7 +27,8 @@ html{
 }
 .section h2{
     color: hsl(71, 73%, 54%);
-    margin: 20px 0 0;
+    font-size: 1.15em;
+    margin: 20px 0;
 }
 .section p{
     color: hsl(218, 22%, 67%);
@@ -61,7 +62,7 @@ html{
 }
 .art-1 p:nth-child(1){
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 .art-1 p:nth-child(2){
     color: rgb(231, 239, 243);
@@ -108,7 +109,7 @@ html{
 
 @media (max-width: 650px) {
     .card{
-        width: 100% !important;
+        width: 90% !important;
     }
 }
 
@@ -120,8 +121,8 @@ html{
         display: flex;
         flex-direction: column;
         height: 100%;
-        width: 75%;
-        padding: 0 10%;
+        width: 65%;
+        padding: 0 5%;
     }
     .section{
         height: 33.3%;
