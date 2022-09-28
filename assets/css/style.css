@@ -20,7 +20,7 @@ html{
     padding: 30px;
     width: 100%;
     border-radius: 10px 10px 0 0;
-    animation: drop 1s;
+    animation: drop .5s;
 }
 .section h1{
     color: hsl(179, 63%, 48%);
@@ -46,7 +46,7 @@ html{
     border-radius: 0 0 0 10px;
     background-color: hsl(179, 62%, 43%);
     color: white;
-    animation: fly-in-left 1s;
+    animation: fly-in-left .5s;
 }
 .art-1 header{
     font-weight: bold;
@@ -92,7 +92,7 @@ html{
     border-radius: 0 0 10px 0;
     background-color: hsla(179, 62%, 43%, 0.8);
     color: white;
-    animation: fly-in-right 1s;
+    animation: fly-in-right .5s;
 }
 .art-2 header{
     font-weight: bold;
