@@ -1,55 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
 *,::before,::after{
     padding: 0;
     margin: 0 auto;
+    font-family: 'Karla', sans-serif;
     box-sizing: border-box;
 }
 html{
-    font-family: 'Karla', sans-serif;
     background-color: rgb(203, 223, 231);
 }
 .card{
     width: 45%;
-    height: 68vh;
+    height: 100%;
     margin: 8% auto;
-}
-@media (max-width: 600px) {
-    html{
-        margin: 5% 5px !important;
-    }
-    .card{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        height: 100% !important;
-        width: 95% !important;
-        padding: 0 10% !important;
-    }
-    .section{
-        height: 33.3% !important;
-        width: 100%;
-        padding: 20px !important;
-        margin: 0 !important;
-    }
-    .two-articles{
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-    .art-1{
-        width: 100% !important;
-        height: 33.3% !important;
-        border-radius: 0 !important;
-        padding: 20px !important;
-        margin: 0 !important;
-    }
-    .art-1 button{
-        margin: 10px 0 !important;
-    }
-    .art-2{
-        width: 100% !important;
-        height: 33.3% !important;
-        border-radius: 0 0 10px 10px !important;
-        padding: 20px !important;
-    }
 }
 .section{
     background-color: white;
@@ -57,11 +20,12 @@ html{
     padding: 30px;
     width: 100%;
     border-radius: 10px 10px 0 0;
+    animation: drop 1s;
 }
-.section h2{
+.section h1{
     color: hsl(179, 63%, 48%);
 }
-.section h3{
+.section h2{
     color: hsl(71, 73%, 54%);
     margin: 20px 0 0;
 }
@@ -72,6 +36,7 @@ html{
 }
 .two-articles{
     display: flex;
+    width: 100%;
 }
 .art-1{
     width: 50%;
@@ -80,6 +45,7 @@ html{
     border-radius: 0 0 0 10px;
     background-color: hsl(179, 62%, 43%);
     color: white;
+    animation: fly-in-left 1s;
 }
 .art-1 header{
     font-weight: bold;
@@ -90,16 +56,20 @@ html{
 }
 .art-1 span{
     color: rgb(199, 221, 230);
-    font-size: 10pt !important;
+    font-size: 13px;
     margin:0 10px;
 }
-.art-1 p:last-of-type{
+.art-1 p:nth-child(1){
+    display: flex;
+    align-items: center;
+}
+.art-1 p:nth-child(2){
     color: rgb(231, 239, 243);
     font-size: 12pt;
     margin: 5px 0;
 }
 .art-1 button{
-    margin: 25px 2.5%;
+    margin: 25px auto;
     width: 95%;
     padding: 14px 10px;
     border: none;
@@ -107,6 +77,12 @@ html{
     box-shadow: 2px 6px 5px rgb(0, 0, 0, 0.2);
     background-color: hsl(71, 73%, 54%);
     color: white;
+    cursor: pointer;
+}
+.art-1 button:hover{
+    border: 1px solid hsl(71, 73%, 54%);
+    background: transparent;
+    color: hsl(71, 73%, 54%);
 }
 .art-2{
     width: 50%;
@@ -115,6 +91,7 @@ html{
     border-radius: 0 0 10px 0;
     background-color: hsla(179, 62%, 43%, 0.8);
     color: white;
+    animation: fly-in-right 1s;
 }
 .art-2 header{
     font-weight: bold;
@@ -122,9 +99,72 @@ html{
 }
 .art-2 ul{
     list-style: none;
-    font-size: 10pt;
+    font-size: 13px;
 }
 .art-2 ul li{
-    margin: 3px 0;
+    margin: 10px 0;
     color: rgb(218, 239, 247);
+}
+
+@media (max-width: 650px) {
+    .card{
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 950px) {
+    html{
+        margin: 5% 5px;
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 75%;
+        padding: 0 10%;
+    }
+    .section{
+        height: 33.3%;
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+    }
+    .two-articles{
+        flex-wrap: wrap;
+    }
+    .art-1{
+        width: 100%;
+        height: 33.3%;
+        border-radius: 0;
+        padding: 20px;
+        margin: 0;
+    }
+    .art-1 button{
+        margin: 10px 0;
+    }
+    .art-2{
+        width: 100%;
+        height: 33.3%;
+        border-radius: 0 0 10px 10px;
+        padding: 20px;
+    }
+}
+
+@keyframes drop {
+    from{
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+}
+@keyframes fly-in-left {
+    from{
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+}
+@keyframes fly-in-right {
+    from{
+        transform: translateX(200px);
+        opacity: 0;
+    }
 }
